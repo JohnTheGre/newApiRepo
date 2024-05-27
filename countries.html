@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <header class="w-full bg-black text-white text-center py-4 fixed top-0 shadow-md z-10">
+        <h1 class="text-2xl font-bold">Football API - Countries</h1>
+        <section class="flex items-center space-x-20 mr-10">
+            <button id="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="false" class="text-4xl right-5" onclick="toggleSidebar()">&#9776;</button>
+        </section>
+    </header>
+    <button onclick="navigateToBack()" class="p-2 bg-white rounded-lg shadow-lg text-center">Back</button>
+    <section id="countries" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8 mt-16">
+    </section>    
+    <script src="countries.js"></script>
+    <section class="sidebar bg-gray-100 fixed inset-y-0 right-0 w-64 transition-transform ease-in-out z-50 hidden" id="mySidebar">
+        <section class="flex justify-between items-center px-4 py-2">
+            <h3 class="text-xl font-semibold">Menu</h3>
+            <button class="w3-bar-item w3-button w3-hide-large" onclick="menu_close()">&#10005;</button>
+        </section>
+        <section class="px-4 py-2">
+            <a href="index.html" class="block text-sm text-gray-700 hover:bg-gray-200 mb-2">
+                <section class="py-1.5">Home</section>
+            </a>
+            <a href="leagues.html" class="block text-sm text-gray-700 hover:bg-gray-200 mb-2">
+                <section class="py-1.5">Leagues</section>
+            </a>
+            <a href="countries.html" class="block text-sm text-gray-700 hover:bg-gray-200 mb-2">
+                <section class="py-1.5">Countries</section>
+            </a>
+        </section>
+    </section>
+</body>
+</html>
